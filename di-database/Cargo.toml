@@ -1,0 +1,13 @@
+[package]
+name = "di-database"
+publish = false
+readme = "README.md"
+version = "0.0.1"
+rust-version = "1.85"
+edition = "2024"
+authors = ["Iteralabs"]
+
+[dependencies]
+
+clickhouse = { version = "0.13", features = ["lz4", "inserter", "time"] }
+

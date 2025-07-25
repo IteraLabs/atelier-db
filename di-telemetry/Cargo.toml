@@ -1,0 +1,12 @@
+[package]
+name = "di-telemetry"
+publish = false
+readme = "README.md"
+version = "0.0.1"
+rust-version = "1.85"
+edition = "2024"
+authors = ["Iteralabs"]
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+

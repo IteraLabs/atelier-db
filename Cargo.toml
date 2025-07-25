@@ -1,0 +1,56 @@
+[workspace]
+resolver = "2"
+members = [
+    "di-database",
+    "di-telemetry",
+    "di-terraform",
+]
+
+[workspace.package]
+edition = "2024"
+rust-version = "1.85"
+
+description = ""
+authors = ["IteraLabs.ai"]
+repository = "https://github.com/iteralabs/atelier-di"
+homepage = "https://iteralabs.ai/atelier"
+
+keywords = ["framework", "infrastructure", "crypto", "trading"]
+categories = ["data-structures", "development-tools"]
+include = ["katex-header.html"]
+exclude = ["assets/*", ".github", "Makefile.toml", "*.log", "tags"]
+
+license = "Apache-2.0"
+
+[workspace.dependencies]
+
+di_database = { path = "./di_database", version = "0.0.1" }
+di_telemetry = { path = "./di_telemetry", version = "0.0.1" }
+di_terraform = { path = "./di_terraform", version = "0.0.1" }
+
+chrono = { version = "0.4", features = ["serde"] }
+criterion = { version = "0.5", features = ["html_reports"] }
+clickhouse = { version = "0.13", features = ["lz4", "inserter", "time"] }
+csv = { version = "1.3" }
+clap = { version = "4.5", features = ["derive"] }
+futures = { version = "0.3" }
+rand = { version = "0.9.0" }
+rand_distr = { version = "0.5.0" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+tokio = { version = "1.45", features = ["full"] }
+thiserror = { version = "1.0.64" }
+toml = { version = "0.8" }
+
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+unused_extern_crates = "allow"
+unreachable_code = "deny"
+unreachable_patterns = "deny"
+unused_variables = "warn"
+trivial_casts = "warn"
+trivial_numeric_casts = "warn"
+unexpected_cfgs = { level = "warn", check-cfg = ['cfg(nightly)'] }
+dead_code = "allow"
+too_many_arguments = "allow"
