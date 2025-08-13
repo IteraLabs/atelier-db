@@ -1,9 +1,9 @@
 [workspace]
 resolver = "2"
 members = [
-    "di-database",
-    "di-telemetry",
-    "di-terraform",
+    "in-database",
+    "in-telemetry",
+    "in-terraform",
 ]
 
 [workspace.package]
@@ -24,9 +24,9 @@ license = "Apache-2.0"
 
 [workspace.dependencies]
 
-di_database = { path = "./di_database", version = "0.0.1" }
-di_telemetry = { path = "./di_telemetry", version = "0.0.1" }
-di_terraform = { path = "./di_terraform", version = "0.0.1" }
+in_database = { path = "./in_database", version = "0.0.1" }
+in_telemetry = { path = "./in_telemetry", version = "0.0.1" }
+in_terraform = { path = "./in_terraform", version = "0.0.1" }
 
 chrono = { version = "0.4", features = ["serde"] }
 criterion = { version = "0.5", features = ["html_reports"] }

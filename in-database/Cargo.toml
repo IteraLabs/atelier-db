@@ -1,5 +1,5 @@
 [package]
-name = "di-terraform"
+name = "in-database"
 publish = false
 readme = "README.md"
 version = "0.0.1"
@@ -8,5 +8,6 @@ edition = "2024"
 authors = ["Iteralabs"]
 
 [dependencies]
-chrono = { version = "0.4", features = ["serde"] }
+
+clickhouse = { version = "0.13", features = ["lz4", "inserter", "time"] }
 
